@@ -66,7 +66,7 @@
 }
 
 /*! Ask the user for permission to things */
-- (BOOL) askUserForPermissionUsingClientSecret: (NSString *)clientSecret error: (NSError *)error
+- (BOOL) askUserForPermissionUsingClientSecret: (NSString *)clientSecret
 {
 
     self.clientSecret = clientSecret;
@@ -88,9 +88,9 @@
     NSError *httpError;
     [self.server start: &httpError];
     
-    // Pass along any errors
+    // Check if there was an error starting the server 
     if (httpError) {
-        error = httpError;
+        return NO; 
     }
     
     // Start the process

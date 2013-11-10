@@ -28,7 +28,7 @@
 // Public methods
 - (id) initWithClientId: (NSString *)clientId;
 - (void) setPort: (int) portNumber;
-- (BOOL) askUserForPermissionUsingClientSecret: (NSString *)clientSecret error: (NSError *)error;
+- (BOOL) askUserForPermissionUsingClientSecret: (NSString *)clientSecret;
 
 - (void) getJSONFor: (NSString *)method withCallback: (SEL)selector;
 - (void) getJSONForURL: (NSString *)url withCallback: (SEL)selector onDelegate: (id)delegate;
