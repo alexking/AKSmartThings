@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AKSmartThings"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "Cocoa wrapper for the SmartThings REST API"
 
   s.description  = <<-DESC
@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'MIT', :file => 'LICENSE' }
   s.author       = { "Alex King" => "alexking@me.com" }
   s.platform     = :osx, '10.9'
-  s.source       = { :git => "https://github.com/alexking/AKSmartThings.git" , :tag => '0.0.1' }
+  s.source       = { :git => "https://github.com/alexking/AKSmartThings.git" , :tag => '0.0.2' }
 
   s.source_files = 'Classes', 'Classes/*.{h,m}'
 
