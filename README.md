@@ -18,11 +18,9 @@ Please submit any bugs to the issue tracker, or feel free to submit a pull reque
 
 To learn more about making [SmartThings](http://smartthings.com) REST APIs, you may want to check out [this blog post from them](http://build.smartthings.com/blog/tutorial-creating-a-custom-rest-smartapp-endpoint/). 
 
-Changelog
-=========
+##Changelog
 ### Version 0.0.1
 Initial release of library, setup with podspec 
 
-License
-=======
+## License
 MIT 
