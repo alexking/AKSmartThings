@@ -168,7 +168,7 @@
 {
     
     NSURL *actionUrl = [NSURL URLWithString: [NSString stringWithFormat: @"https://graph.api.smartthings.com%@?access_token=%@", url, self.accessToken]];
-    NSLog(@"%@", actionUrl);
+
     NSURLRequest *actionRequest = [[NSURLRequest alloc] initWithURL: actionUrl];
  
     [NSURLConnection sendAsynchronousRequest: actionRequest
