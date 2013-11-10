@@ -8,11 +8,11 @@ Cocoa wrapper for communicating with [SmartThings](http://smartthings.com) REST 
 * Endpoint discovery 
 
 ## Use
-I'll be releasing a project that can serve as a usage example soon - but for now, you can add this to your [cocoapods](http://cocoapods.org) `Podfile` –
+I'll be releasing a project that can serve as a usage example soon - but for now, you can add this to your [CocoaPods](http://cocoapods.org) `Podfile` –
 
     pod 'AKSmartThings', :git => 'https://github.com/alexking/AKSmartThings.git'
     
-Then just `#import <AKSmartThings/AKSmartThings.h>`. 
+Then just run `pod install` and import using `#import <AKSmartThings/AKSmartThings.h>`. 
 
 Please submit any bugs to the issue tracker, or feel free to submit a pull request. 
 
