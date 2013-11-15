@@ -34,13 +34,25 @@
 
 - (void) discoveredEndpoints: (id) endpoints
 {
+    
+    // Check for errors 
+    if ([endpoints isKindOfClass: [NSDictionary class]] && [endpoints objectForKey: @"error"])
+    {
+        // There was an error 
+        if ([self.delegate respondsToSelector: @selector(handleError:)])
+        {
+            [self.delegate handleError: [NSError errorWithDomain: @"AKSmartThings" code: 10 userInfo: endpoints]];
+            
+            return;
+        }
+    }
+    
     self.endpoints = endpoints;
     
     // Inform our delegate that it can make API calls now
-    if ([self.delegate respondsToSelector: @selector(readyForApiRequests:)]) {
-        
+    if ([self.delegate respondsToSelector: @selector(readyForApiRequests:)])
+    {
         [self.delegate readyForApiRequests: self];
-        
     }
     
 }
@@ -90,7 +102,13 @@
     
     // Check if there was an error starting the server 
     if (httpError) {
-        return NO; 
+        
+        if ([self.delegate respondsToSelector: @selector(handleError:)])
+        {
+            [self.delegate handleError: httpError];
+        }
+        
+        return NO;
     }
     
     // Start the process

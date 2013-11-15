@@ -43,6 +43,7 @@
 @protocol AKSmartThingsDelegate <NSObject>
 @optional
 - (void)handleAccessToken: (NSString *)accessToken;
+- (void)handleError: (NSError *)error;
 - (void)readyForApiRequests: (AKSmartThings*) sender;
 
 @end
