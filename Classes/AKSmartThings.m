@@ -20,7 +20,10 @@
 {
     _accessToken = accessToken;
     
-    [self discoverEndpoints];
+    if (accessToken != nil)
+    {
+        [self discoverEndpoints];
+    }
 }
 
 - (void) discoverEndpoints
@@ -139,13 +142,16 @@
             redirectTo = [NSString stringWithFormat: @"window.location = '%@://';", self.applicationUrlScheme];
         }
         
+        // Shut down the server until we need it again
+        [self.server stop: YES];
+        
         return [NSString stringWithFormat: @"<script>window.onload = function() { %@ %@ }</script>",
                 redirectTo, @"setTimeout(function() { open(location, '_self').close(); }, 100);"];
         
     }
-
-    // Default to OK
-    return @"OK";
+    
+    // If it didn't work, show the error message
+    return [NSString stringWithFormat: @"There was an error: <br/> %@", params];
     
 }
 
