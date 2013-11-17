@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "AKSmartThings"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "Cocoa wrapper for the SmartThings REST API"
 
   s.description  = <<-DESC
