@@ -32,8 +32,8 @@ Bug fixes
 Initial release of library, setup with podspec 
 
 ## License
-MIT 
+[Unlicense](http://unlicense.org) - this is free and unencumbered software released into the public domain.
 
 ## Dependencies 
 
-* [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) – [BSD License](https://github.com/robbiehanson/CocoaHTTPServer/blob/master/LICENSE.txt)
+* [CocoaHTTPServer](https://github.com/robbiehanson/CocoaHTTPServer) – [License](https://github.com/robbiehanson/CocoaHTTPServer/blob/master/LICENSE.txt)
